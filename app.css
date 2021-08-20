@@ -1,11 +1,152 @@
-p{
-    text-align: center;
-    font-family: Helvetica;
+
+/* Reset */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
 }
 
-h1{
-    text-align: center;
-    font-weight: 500;
-    font-size: 70px;
-    font-family: Helvetica;
+/* Start styling */
+html{
+    font-family: 'Source Sans Pro', sans-serif;
+    box-sizing: border-box;
+    margin: 20px 50px 20px 50px; 
+}
+
+body {
+  background-color: #3AAFA9;
+  color: #17252A;
+}
+
+a:hover {color: #EDF5E1;}
+
+/* Nav */
+
+
+
+nav {
+  display: flex;
+  font-size: 1.5em;
+  justify-content: space-between;
+  align-items: center;
+  /* border: 1px solid red; */
+
+}
+
+a {
+  text-decoration: none;
+  display: block;
+  position: relative;
+  padding: 0.2em 0;
+  color: #17252A;
+  font-weight: 600;
+}
+
+.nav_links{
+  list-style: none;
+}
+
+.nav_links li{
+  display: inline-block;
+  padding: 5px 40px;
+}
+
+.nav_links li a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0.1em;
+  background-color: #EDF5E1;
+  opacity: 0;
+  transition: opacity 300ms, transform 300ms;
+}
+
+.nav_links li a::after {
+  opacity: 1;
+  transform: scale(0);
+  transform-origin: center;
+}
+
+.nav_links li a:hover::after,
+.nav_links li a:focus::after{
+  transform: scale(1);
+}
+
+.logo {
+  font-family: 'Shrikhand', cursive;
+  font-size: 2em;
+  color: #FEFFFF;
+  margin-left: 25px;
+}
+
+a.logo:hover{
+  color: #FEFFFF;
+  text-shadow: 2px 2px 4px black;
+}
+
+/* Intro Page */
+section.Home{
+  font-size: 1.5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh;
+} 
+
+
+/* about page */
+#AboutPic{
+  border: 10px solid white;
+  margin-top: 20px;
+  width: 60%;
+  height: auto;
+  max-width: 400px;
+}
+
+section.About{
+  font-size: 1.5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh;
 }
