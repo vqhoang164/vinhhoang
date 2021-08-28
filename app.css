@@ -64,7 +64,7 @@ a:hover {color: #EDF5E1;}
 
 nav {
   display: flex;
-  font-size: 1.5em;
+  font-size: 1.2em;
   justify-content: space-between;
   align-items: center;
   /* border: 1px solid red; */
@@ -86,7 +86,7 @@ a {
 
 .nav_links li{
   display: inline-block;
-  padding: 5px 40px;
+  padding: 0.5em 0.7em;
 }
 
 .nav_links li a::after {
@@ -136,17 +136,97 @@ section.Home{
 
 /* about page */
 #AboutPic{
-  border: 10px solid white;
+  border: 0.5em solid white;
   margin-top: 20px;
   width: 60%;
   height: auto;
-  max-width: 400px;
 }
 
 section.About{
+  font-size: 1em;
+}
+
+ul.Education{
+  list-style-type: square;
+  padding: 1em;
+  font-size: 1.1em;
+  line-height: 1.2;
+}
+
+/* Experience page*/
+div.Experience{
+  max-width: 45rem;
+}
+
+h1{
+  border-bottom: 2px solid currentColor;
+  padding-bottom: 5px;
+  margin-top: 30px;
+  display: inline;
+}
+
+h1, h2{
+  text-transform: uppercase;
+  font-weight: 600;
   font-size: 1.5em;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 80vh;
+  color: #EDF5E1;
+}
+
+h3{
+  font-weight: bold;
+}
+
+p{
+  font-size: 1.2em;
+}
+
+@media screen and (max-width: 40em){
+  h1, h2, h3, p.WorkYear{
+    text-align: center;
+  }
+
+  div.porfolio_grid{
+    min-width: 100%;
+  }
+
+  html{
+    margin: auto; 
+  }
+
+  #AboutPic{
+    width: 40%;
+    height: auto;
+  }
+}
+
+.ResumeButton {
+	background-color:#17252A;
+	border-radius:28px;
+	display:inline-block;
+	cursor:pointer;
+	color:#FEFFFF;
+	font-size:1em;
+	padding:12px 30px;
+}
+.ResumeButton:hover {
+	background-color:#DEF2F1;
+  color:#17252A;
+}
+.ResumeButton:active {
+	position:relative;
+	top:1px;
+}
+
+/* project */
+div.porfolio_grid{
+  max-width: 75%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+a.project_a {
+  text-decoration: none;
+  font-weight: normal;
+  color: inherit;
+  padding:0;
 }
