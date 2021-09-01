@@ -16,14 +16,16 @@
 <body>
     <main>
 
-        <nav>
-            <a class="logo" href="index.html">Vinh Hoang </a>
-            <ul class="nav_links">
-                <li><a href="about.html">About</a></li>
-                <li><a href="project.html">Projects</a></li>
-                <li><a href="experience.html">Experience</a></li>
-            </ul>
-        </nav>
+        <div class="container-lg pt-3">
+            <nav>
+                <a class="logo" href="index.html">Vinh Hoang </a>
+                <ul class="nav_links">
+                    <li><a href="./about.html">About</a></li>
+                    <li><a href="./project.html">Projects</a></li>
+                    <li><a href="./experience.html">Experience</a></li>
+                </ul>
+            </nav>
+        </div>
 
         <section class="my-5">
             <div class="Porfolio container text-center">
@@ -32,24 +34,16 @@
             </div>
         </section>
 
-        <div class="porfolio_grid py-5" id="GroupProject">
+        <div class="porfolio_grid pt-1" id="GroupProject">
             <div class="container">
 
                 <div class="row" id="row1">
 
-                        <div class="flex-md-last collapse fade mb-4 mt-1" id="detail_BLERobot">
-                            <div class="card card-body">Here are the details for 3</div>
-                        </div>
-                        <div class="flex-md-last collapse fade mb-4 mt-1" id="detail_RobotArm">
-                            <div class="card card-body">Here are the details for 4</div>
-                        </div>
-
-
+                    <!-- Feeder project -->
                     <div class="col-md-4">
                         <div class="card mb-4">
                             <a class="project_a" href="#detail_feeder" data-bs-toggle="collapse" aria-expanded="true">
-                                <img class="card-img-top" src="Image/pet_feeder.jpg" style="height: 200px; width: 100%;
-                                display: block;" data-holder-rendered="true">
+                                <img class="card-img-top" src="Image/pet_feeder.jpg" data-holder-rendered="true">
                                 <div class="card-body">
                                     <p class="card-text text-center">App-Controlled Pet Feeder</p>
                                 </div>
@@ -58,16 +52,99 @@
                         </div>
                     </div>
 
-                    <!-- project detail collpase -->
-                    <div class="col order-md-last collapse fade mb-4 mt-1" id="detail_feeder">
-                        <div class="card card-body">Project details coming soon</div>
+                    <!-- Feeder project detail collpase -->
+                    <div class="col-12 order-md-last collapse fade mb-4" id="detail_feeder">
+                        <div class="ProjectInfo px-2">
+                            <h4>
+                                App-Controlled Pet Feeder Project
+                                <button type="button" class="btn-close float-end" href="#detail_feeder"
+                                    data-bs-toggle="collapse" aria-label="Close">
+                                </button>
+                            </h4>
+
+                            <h5> Objective </h5>
+                            <p>The project in the Advanced Hardware Design course aims to combine hardware and software
+                                to
+                                design a practical application. This automatic feeder can dispense dry food for my pet.
+                                The features are:
+                            </p>
+                            <ul class="Education">
+                                <li> System to be controlled manually and remotely using network. </li>
+                                <li> Network database for timestamp records. </li>
+                                <li> Motor controller to adjust the amount of food dispensed.</li>
+                            </ul>
+
+                            <h5> Approach</h5>
+                            <p>
+                                The schematic shows how different systems interface. I use Raspberry Pi 4 as the brain
+                                for the feeder. Basically, it controls a stepper motor through GPIO pins and connected
+                                to a network cloud database: Google Firebase. A button is connected to the Pi for manual
+                                control. Next, I wrote an Android App that sends signals and updates variables on
+                                Firebase. The Raspberry keeps monitoring the database and response in real time. It also
+                                writes timing records to Firebase, and the App can retrieve and display to the user. The
+                                Raspberry code is written in Python. <br> <br>
+                            </p>
+
+                            <div class="text-center">
+                                <img class="img-fluid text-center" src="./Image/Project/Feeder/system.jpg"
+                                    alt="System Schematic" style="max-width: 50%;"> <br>
+                            </div>
+
+                            <p>
+                                The feeder is an aftermarket food container. It is modified by connecting the dispense
+                                mechanism to a stepper motor. Instead of using DC or Servo motor, stepper motor can
+                                offer more precise positioning control to achieve the same number of steps, or the same
+                                revolution at each cycle. In addition, speed is not a crucial consideration for this
+                                application, but torque is a higher priority. The motor is bipolar, with the 1.8o
+                                rotation per step. Therefore, it needs 200 steps to complete a full revolution.
+                                The 3.3 V pin cannot provide enough power to the motor. Instead, I use L298N
+                                motor-driver module and connect 12V external power to provide full torque. The module
+                                has two H-bridges and each one drives the coil of the motor. The enable pins from the
+                                module are connected to the GPIO pins of the Raspberry Pi.
+                            </p>
+
+                            <div class=text-center>
+                                <img class="img-fluid " src="./Image/Project/Feeder/motor_connection.jpg" style="max-height: 20%;
+                                display: inline-block;">
+                                <img class="img-fluid" src="./Image/Project/Feeder/container.jpg" style="max-height:20%;
+                                display: inline-block;"> <br>
+                            </div>
+
+                            <p>The Android App is coded in Android Studio (JavaScript). It has only one segment
+                                containing all main activities. The App connects to the network to write variables on
+                                Firebase and read strings sent from Raspberry to display timestamps.</p> <br>
+
+                            <div class="text-center">
+                                <img class="img-fluid" src="./Image/Project/Feeder/app.jpg" style="max-width: 40%;
+                                display: inline-block;">
+                            </div>
+
+                            <h5>Results</h5>
+                            <p> Project Demo Video</p> <br>
+                            <p> <span id="bold_underline">What I learned:</span> Python, Android App development,
+                                Raspberry Pi, Network interface, Stepper
+                                Motor Control</p> <br>
+                            <p> <span id="bold_underline">Future improvement:</span> As more dry food is added to the
+                                container, it adds more weight to
+                                the rotating valve which requires more torque to turn. Updates for the system need to
+                                include a high torque motor, or modify the valve system, such as helical to reduce the
+                                torque.</p> <br>
+
+                            <div class="text-center">
+                                <a href="#detail_feeder" class="ResumeButton" data-bs-toggle="collapse"
+                                    aria-label="Close">
+                                    Close Detail
+                                </a>
+                            </div> <br>
+
+                        </div>
                     </div>
 
+                    <!-- FPGA project -->
                     <div class="col-md-4">
                         <div class="card mb-4">
                             <a class="project_a" href="#detail_FPGA" data-bs-toggle="collapse" aria-expanded="true">
-                                <img class="card-img-top" src="Image/FPGA.jpg" style=" height: 200px; width: 100%;
-                                display: block;" data-holder-rendered="true">
+                                <img class="card-img-top" src="Image/FPGA.jpg" data-holder-rendered="true">
                                 <div class="card-body">
                                     <p class="card-text text-center">FPGA-based Memory Game</p>
                                 </div>
@@ -75,15 +152,14 @@
                         </div>
                     </div>
 
-                    <!-- project detail collpase -->
+                    <!-- FPGA project detail collpase -->
                     <div class="col order-md-last collapse fade mb-4 mt-1" id="detail_FPGA">
                         <div class="card card-body">Project details coming soon</div>
                     </div>
 
                     <div class="col-md-4">
                         <div class="card mb-4">
-                            <img class="card-img-top" src="Image/BLE_Robot.jpg" style=" height: 200px; width: 100%;
-                                display: block;" data-holder-rendered="true">
+                            <img class="card-img-top" src="Image/BLE_Robot.jpg" data-holder-rendered="true">
                             <div class="card-body">
                                 <p class="card-text text-center">Bluetooth Controled Robot</p>
                             </div>
@@ -94,8 +170,7 @@
                 <div class="row" id="row2">
                     <div class="col-md-4">
                         <div class="card mb-4">
-                            <img class="card-img-top" src="Image/RobotArm.jpg" style=" height: 200px; width: 100%;
-                                display: block;" data-holder-rendered="true">
+                            <img class="card-img-top" src="Image/RobotArm.jpg" data-holder-rendered="true">
                             <div class="card-body">
                                 <p class="card-text text-center">Robotic Arm</p>
                             </div>
@@ -105,6 +180,10 @@
             </div>
 
     </main>
+
+    <footer>
+        <p> 2021 Made by Vinh Hoang</p>
+    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"
         integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp"
