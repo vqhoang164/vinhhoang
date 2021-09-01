@@ -129,7 +129,7 @@ section.Home{
   display: flex;
   align-items: center;
   text-align: center;
-  min-height: 80vh;
+  min-height: 70vh;
   /* background: url(./Image/IndexBackground.jpg) no-repeat center center fixed; 
   background-size: contain; */
   background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,#a4a6a7 40%,#a4a6a7 60%, rgba(0,0,0,0) 100%); 
@@ -354,4 +354,18 @@ h5{
   height: 25vh; 
   width: 100%;
   display: block;
+}
+
+#PlayButton{
+  width: 1.5em;
+  vertical-align: middle;
+}
+
+a.lightbg{
+	display:inline-block;
+  font-weight: 100;
+}
+
+a.lightbg:hover {
+  color: #3AAFA9;
 }
