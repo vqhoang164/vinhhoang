@@ -9,22 +9,25 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
     <link rel="stylesheet" href="app.css">
-    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
+    <!-- Google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Rampart+One&family=Tinos&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <main>
-
-        <div class="container-lg pt-3">
-            <nav>
-                <a class="logo" href="index.html">Vinh Hoang </a>
-                <ul class="nav_links">
-                    <li><a href="./about.html">About</a></li>
-                    <li><a href="./project.html">Projects</a></li>
-                    <li><a href="./experience.html">Experience</a></li>
-                </ul>
-            </nav>
+        <div class="NavContainer">
+            <div class="container py-3 px-5">
+                <nav>
+                    <a class="logo" href="index.html">Vinh Hoang </a>
+                    <ul class="nav_links">
+                        <li><a href="./about.html">About</a></li>
+                        <li><a href="./project.html">Projects</a></li>
+                        <li><a href="./experience.html">Experience</a></li>
+                    </ul>
+                </nav>
+            </div>
         </div>
 
         <section class="my-5">
@@ -54,7 +57,7 @@
 
                     <!-- Feeder project detail collpase -->
                     <div class="col-12 order-md-last collapse fade mb-4" id="detail_feeder">
-                        <div class="ProjectInfo px-2">
+                        <div class="ProjectInfo px-2 shadow-sm">
                             <h4>
                                 App-Controlled Pet Feeder Project
                                 <button type="button" class="btn-close float-end" href="#detail_feeder"
