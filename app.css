@@ -46,15 +46,56 @@ table {
 
 /* Start styling */
 html{
-    font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'Tinos', serif;
 }
 
+/* Color scheme */
 body {
-  background-color: #3AAFA9;
-  color: #17252A;
+  background-color: #fffcf2;
+  color: #2b2d42;
+  line-height: 1.4;
 }
 
-a:hover {color: #EDF5E1;}
+a:hover {color: #ffbe0b;}
+
+a{
+  color: white;
+}
+
+.logo {
+  color: white;
+}
+
+#index_logo{
+  color: #245501;
+  font-size: 2em;
+  font-style: italic;
+  font-weight: bold; 
+}
+
+#index_nav{
+  color: #245501;
+}
+
+#index_nav:hover, #index_logo:hover, .SocialButton, .lightbg{
+  color: #ffbe0b;
+}
+
+a.logo:hover{
+  color: #fcf6bd;
+}
+
+.nav_links li a::after {
+  background-color: #ffbe0b;
+}
+
+div.NavContainer{
+  background: #245501;
+}
+
+h1, h2{
+  color: #606c38;
+}
 
 footer {
   left: 0;
@@ -77,7 +118,6 @@ a {
   display: block;
   position: relative;
   padding: 0.2em 0;
-  color: #17252A;
   font-weight: 600;
 }
 
@@ -97,7 +137,6 @@ a {
   left: 0;
   width: 100%;
   height: 0.1em;
-  background-color: #EDF5E1;
   opacity: 0;
   transition: opacity 300ms, transform 300ms;
 }
@@ -113,15 +152,19 @@ a {
   transform: scale(1);
 }
 
+.CurrentNav {
+  color: #ffbe0b;
+}
+
 .logo {
-  font-family: 'Shrikhand', cursive;
+  font-family: 'Tinos', serif;
   font-size: 2em;
-  color: #FEFFFF;
+  font-style: italic;
+  font-weight: bold;  
 }
 
 a.logo:hover{
-  color: #FEFFFF;
-  text-shadow: 2px 2px 4px black;
+  text-shadow: 2px 2px 4px rgb(24, 23, 23);
 }
 
 /* Intro Page */
@@ -130,15 +173,15 @@ section.Home{
   align-items: center;
   text-align: center;
   min-height: 70vh;
-  /* background: url(./Image/IndexBackground.jpg) no-repeat center center fixed; 
-  background-size: contain; */
-  background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,#a4a6a7 40%,#a4a6a7 60%, rgba(0,0,0,0) 100%); 
+  background: url(./Image/IndexBackground.jpg) no-repeat center center fixed; 
+  background-size: contain;
+  /* background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,#ecf0f3 40%,#ecf0f3 60%, rgba(0,0,0,0) 100%);  */
 } 
 
 /*  text animation   */
 
 div.Welcome{
-  text-transform: uppercase;
+  font-family: 'Rampart One', cursive;
   display: inline-block;
   font-size: 5em;
   font-weight: 900;
@@ -149,26 +192,28 @@ div.Welcome{
 }
 
 div.IntroText{
+  font-family: 'Kaushan Script', cursive;
   display: inline-block;
   font-size: 2em;
   overflow:hidden;
   text-align: left;
   padding-left: 30px;
   padding-bottom: 5px;
+  color: #EDF5E1; 
 }
 
 div.Welcome:first-of-type {  
-  animation: showup 6s;
+  animation: showup 8s;
 }
 
 div.Welcome:last-of-type {
   width:0px;
-  animation: reveal 6s;
+  animation: reveal 8s;
 }
 
  div.IntroText:last-of-type span {
   margin-left:-900px;
-  animation: slidein 6s;
+  animation: slidein 8s;
   margin-left: 0px;
 } 
 
@@ -182,7 +227,7 @@ div.Welcome:last-of-type {
 @keyframes slidein {
     0% { margin-left:-900px; }
     20% { margin-left:-900px; }
-    35% { margin-left:0px; }
+    50% { margin-left:0px; }
     100% { margin-left:0px; }
 }
 
@@ -193,6 +238,7 @@ div.Welcome:last-of-type {
     80% {opacity:1;}
     100% {opacity:1;}
 }
+
 
 
 /* about page */
@@ -211,7 +257,7 @@ ul.Education{
   list-style-type: square;
   padding: 1em;
   font-size: 1.1em;
-  line-height: 1.2;
+  line-height: 1.4;
 }
 
 .SocialButton {
@@ -237,18 +283,18 @@ h1, h2{
   text-transform: uppercase;
   font-weight: 600;
   font-size: 1.5em;
-  color: #EDF5E1;
 }
 
 h3{
   font-weight: bold;
+  font-size: 1.5em;
 }
 
 p{
   font-size: 1.2em;
 }
 
-@media screen and (max-width: 62em){
+@media screen and (max-width: 55em){
   h1, h2, h3, p.WorkYear{
     text-align: center;
   }
@@ -279,11 +325,21 @@ p{
     text-align: center;
     font-size: 1em;
   }
+
   
+  div.Welcome, div.IntroText{
+    text-align: center;
+    color: #17252A;
+  }
+  
+  section.Home{
+    background-image: none;
+  }
+
 }
 
 .ResumeButton {
-	background-color:#17252A;
+	background-color:#245501;
 	border-radius:28px;
 	display:inline-block;
 	cursor:pointer;
@@ -333,7 +389,7 @@ h5{
   padding: 0.5em 0 0.5em 2px;
   font-size: 1em;
   font-weight: bold;
-  background-color: #17252A;
+  background-color: #245501;
 }
 
 .ProjectInfo{
@@ -342,7 +398,8 @@ h5{
 }
 
 .card-body{
-  background-color:#EDF5E1;
+  background-color:#245501;
+  color: white;
 }
 
 #bold_underline{
@@ -363,9 +420,9 @@ h5{
 
 a.lightbg{
 	display:inline-block;
-  font-weight: 100;
+  font-weight: 500;
 }
 
-a.lightbg:hover {
+/* a.lightbg:hover {
   color: #3AAFA9;
-}
+} */
