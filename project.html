@@ -40,420 +40,449 @@
 
         <div class="porfolio_grid pt-1" id="GroupProject">
             <div class="container">
+                <div id="ProjectGrid">
+                    <div class="row" id="row1">
 
-                <div class="row" id="row1">
-
-                    <!-- FPGA project -->
-                    <div class="col-md-4">
-                        <div class="card mb-4">
-                            <a class="project_a" href="#detail_FPGA" data-bs-toggle="collapse" aria-expanded="true">
-                                <img class="card-img-top" src="Image/FPGA.jpg" data-holder-rendered="true">
-                                <div class="card-body">
-                                    <p class="card-text text-center">FPGA-based Memory Game</p>
-                                </div>
-                            </a>
+                        <!-- FPGA project -->
+                        <div class="col-md-4">
+                            <div class="card mb-4">
+                                <a class="project_a" href="#detail_FPGA" data-bs-toggle="collapse" aria-expanded="true">
+                                    <img class="card-img-top" src="Image/FPGA.jpg" data-holder-rendered="true">
+                                    <div class="card-body">
+                                        <p class="card-text text-center">FPGA-based Memory Game</p>
+                                    </div>
+                                </a>
+                            </div>
                         </div>
-                    </div>
 
-                    <!-- FPGA project detail collpase -->
-                    <div class="col order-md-last collapse fade mb-4 mt-1" id="detail_FPGA">
-                        <div class="ProjectInfo px-2 shadow-md">
-                            <h4>
-                                FPGA-based Memory Game
-                                <button type="button" class="btn-close float-end" href="#detail_FPGA"
-                                    data-bs-toggle="collapse" aria-label="Close">
-                                </button>
-                            </h4>
-                            <h5> Objective </h5>
-                            <p> This team project's goal was to apply digital design knowlege and create a fun game on
-                                the FPGA using Verilog.
-                                The gameplay was simple: the user needed to replicate a sequence of 3 random generated
-                                number in a limited time. After one set, the sequence would start again with a new
-                                sequence,
-                                and the process continued until total time ran out. To add complexity to the design,
-                                we implemented different features such as:
-                            </p>
+                        <!-- FPGA project detail collpase -->
+                        <div class="col order-md-last collapse fade mb-4 mt-1" id="detail_FPGA" data-bs-parent="#ProjectGrid">
+                            <div class="ProjectInfo px-2 shadow-md">
+                                <h4>
+                                    FPGA-based Memory Game
+                                    <button type="button" class="btn-close float-end" href="#detail_FPGA"
+                                        data-bs-toggle="collapse" aria-label="Close">
+                                    </button>
+                                </h4>
+                                <h5> Objective </h5>
+                                <p> This team project's goal was to apply digital design knowlege and create a fun game
+                                    on
+                                    the FPGA using Verilog.
+                                    The gameplay was simple: the user needed to replicate a sequence of 3 random
+                                    generated
+                                    number in a limited time. After one set, the sequence would start again with a new
+                                    sequence,
+                                    and the process continued until total time ran out. To add complexity to the design,
+                                    we implemented different features such as:
+                                </p>
 
-                            <ul class="Education">
-                                <li> Multi-user authentication: allow different players to login and play </li>
-                                <li> Score Keeping: record of each player and highest score </li>
-                                <li> Log In/Out</li>
-                                <li> Difficulty Setting</li>
-                                <li> Password Reset </li>
-                            </ul>
+                                <ul class="Education">
+                                    <li> Multi-user authentication: allow different players to login and play </li>
+                                    <li> Score Keeping: record of each player and highest score </li>
+                                    <li> Log In/Out</li>
+                                    <li> Difficulty Setting</li>
+                                    <li> Password Reset </li>
+                                </ul>
 
-                            <p> We use the switches, button, and seven-segment LED display on the FPGA for the game
-                                interface.</p>
+                                <p> We use the switches, button, and seven-segment LED display on the FPGA for the game
+                                    interface.</p>
 
-                            <div class="text-start">
-                                <img class="img-fluid" src="./Image/Project/FPGA/interface.jpg" alt="FPGA Interface"
-                                    style="max-width: 80%;"> <br>
-                            </div>
+                                <div class="text-start">
+                                    <img class="img-fluid" src="./Image/Project/FPGA/interface.jpg" alt="FPGA Interface"
+                                        style="max-width: 80%;"> <br>
+                                </div>
 
-                            <h5> Approach </h5>
-                            <p>
-                                Before dividing tasks, our team came together to build and agreed on the
-                                top-level system architect. The top-level system provided an overview of the required
-                                functionalities, modules' interactions,
-                                registers, wirings, input/outputs, and opportunity to optimize as the work progressed.
-                                <br> <br>
-                            </p>
-                            <div class="container-lg text-center">
-                                <div class="row">
-                                    <div class="col-6">
-                                        <img class="img-fluid " src="./Image/Project/FPGA/TopLevel.jpg">
-                                    </div>
-                                    <div class="col-6">
-                                        <img class="img-fluid" src="./Image/Project/FPGA/SimplifiedTopLevel.JPG">
+                                <h5> Approach </h5>
+                                <p>
+                                    Before dividing tasks, our team came together to build and agreed on the
+                                    top-level system architect. The top-level system provided an overview of the
+                                    required
+                                    functionalities, modules' interactions,
+                                    registers, wirings, input/outputs, and opportunity to optimize as the work
+                                    progressed.
+                                    <br> <br>
+                                </p>
+                                <div class="container-lg text-center">
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <img class="img-fluid " src="./Image/Project/FPGA/TopLevel.jpg">
+                                        </div>
+                                        <div class="col-6">
+                                            <img class="img-fluid" src="./Image/Project/FPGA/SimplifiedTopLevel.JPG">
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <p>
-                                Various modules were implemented to build up the game. Some examples are: LFSR random
-                                number generator,
-                                shift register, multi-digit timer, button shaper, load register, 7-segment display,
-                                adder, etc.
-                                ROM and RAM were used to save the scores, password, and user ID. All modules were
-                                written in Verilog.
-                                We used Quartus Prime to synthesize Verilog files to the FPGA board. <br> <br>
+                                <p>
+                                    Various modules were implemented to build up the game. Some examples are: LFSR
+                                    random
+                                    number generator,
+                                    shift register, multi-digit timer, button shaper, load register, 7-segment display,
+                                    adder, etc.
+                                    ROM and RAM were used to save the scores, password, and user ID. All modules were
+                                    written in Verilog.
+                                    We used Quartus Prime to synthesize Verilog files to the FPGA board. <br> <br>
 
-                            </p>
+                                </p>
 
-                            <div class="container-lg text-center">
-                                <div class="row">
-                                    <div class="col-6">
-                                        <img class="img-fluid " src="./Image/Project/FPGA/AuthModule.jpg">
-                                    </div>
-                                    <div class="col-6">
-                                        <img class="img-fluid" src="./Image/Project/FPGA/RanNumSeqModule.jpg">
-                                    </div>
-                                </div>
-                            </div>
-                            <p>
-                                One of the modules that I handled was the random number sequence controller.
-                                This module was the unique feature of our project from other teams. It contained
-                                random number generator, FIFO, and a controller. I modified a simplified version of FIFO
-                                that stored three numbers and it could
-                                read/write the generated random numbers when signaled, while ensuring the sequence
-                                consistency.
-                                The finite-state machine method was used to define stages of the game flow over the
-                                clock cycles.
-                            </p>
-                            <div class="container-lg text-center">
-                                <div class="row">
-                                    <div class="col-6">
-                                        <img class="img-fluid " src="./Image/Project/FPGA/FiniteStateMachine.jpg">
-                                    </div>
-                                    <div class="col-6">
-                                        <img class="img-fluid" src="./Image/Project/FPGA/FIFO Schematic.jpg">
+                                <div class="container-lg text-center">
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <img class="img-fluid " src="./Image/Project/FPGA/AuthModule.jpg">
+                                        </div>
+                                        <div class="col-6">
+                                            <img class="img-fluid" src="./Image/Project/FPGA/RanNumSeqModule.jpg">
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
+                                <p>
+                                    One of the modules that I handled was the random number sequence controller.
+                                    This module was the unique feature of our project from other teams. It contained
+                                    random number generator, FIFO, and a controller. I modified a simplified version of
+                                    FIFO
+                                    that stored three numbers and it could
+                                    read/write the generated random numbers when signaled, while ensuring the sequence
+                                    consistency.
+                                    The finite-state machine method was used to define stages of the game flow over the
+                                    clock cycles.
+                                </p>
+                                <div class="container-lg text-center">
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <img class="img-fluid " src="./Image/Project/FPGA/FiniteStateMachine.jpg">
+                                        </div>
+                                        <div class="col-6">
+                                            <img class="img-fluid" src="./Image/Project/FPGA/FIFO Schematic.jpg">
+                                        </div>
+                                    </div>
+                                </div>
 
-                            <p>
-                                ModelSim was used to simulate and test all modules. I used direct test method,
-                                tried different inputs cases and verified the expected outputs.
-                                Testing was done on all individual modules and built up to debug larger modules.
-                                Simulation is an efficient
-                                method to minimize bugs before synthesis.
-                            </p>
+                                <p>
+                                    ModelSim was used to simulate and test all modules. I used direct test method,
+                                    tried different inputs cases and verified the expected outputs.
+                                    Testing was done on all individual modules and built up to debug larger modules.
+                                    Simulation is an efficient
+                                    method to minimize bugs before synthesis.
+                                </p>
 
-                            <div class="text-center">
-                                <img class="img-fluid" src="./Image/Project/FPGA/Testbench.jpg"
-                                    alt="Testbench on ModelSim" style="max-width: 50%;"> <br>
-                            </div>
+                                <div class="text-center">
+                                    <img class="img-fluid" src="./Image/Project/FPGA/Testbench.jpg"
+                                        alt="Testbench on ModelSim" style="max-width: 50%;"> <br>
+                                </div>
 
-                            <h5>Results</h5>
+                                <h5>Results</h5>
 
-                            <a href="#" class="lightbg">
                                 <p> <img id="PlayButton" src="./Image/Icon/play-btn.svg" alt="Play Button Icon"> Project
-                                    Demo Video</p> <br>
-                            </a>
+                                    Demo:</p>
 
-                            <p> <span id="bold_underline">What I learned:</span> VHDL, Verilog, Digital Design, FPGA,
-                                Testbench, ModelSim, Simulation </p> <br>
+                                <video width="320" height="240" controls>
+                                    <source src="./Video/FPGA_1.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video> <br>
 
-                            <div class="text-center">
-                                <a href="#detail_FPGA" class="ResumeButton" data-bs-toggle="collapse"
-                                    aria-label="Close">
-                                    Close Detail
+                                <p> <span id="bold_underline">What I learned:</span> VHDL, Verilog, Digital Design,
+                                    FPGA,
+                                    Testbench, ModelSim, Simulation </p> <br>
+
+                                <div class="text-center">
+                                    <a href="#detail_FPGA" class="ResumeButton" data-bs-toggle="collapse"
+                                        aria-label="Close">
+                                        Close Detail
+                                    </a>
+                                </div> <br>
+                            </div>
+                        </div>
+
+
+                        <!-- Feeder project -->
+                        <div class="col-md-4">
+                            <div class="card mb-4">
+                                <a class="project_a" href="#detail_feeder" data-bs-toggle="collapse"
+                                    aria-expanded="true">
+                                    <img class="card-img-top" src="Image/pet_feeder.jpg" data-holder-rendered="true" >
+                                    <div class="card-body">
+                                        <p class="card-text text-center">App-Controlled Pet Feeder</p>
+                                    </div>
                                 </a>
-                            </div> <br>
-                        </div>
-                    </div>
 
-
-                    <!-- Feeder project -->
-                    <div class="col-md-4">
-                        <div class="card mb-4">
-                            <a class="project_a" href="#detail_feeder" data-bs-toggle="collapse" aria-expanded="true">
-                                <img class="card-img-top" src="Image/pet_feeder.jpg" data-holder-rendered="true">
-                                <div class="card-body">
-                                    <p class="card-text text-center">App-Controlled Pet Feeder</p>
-                                </div>
-                            </a>
-
-                        </div>
-                    </div>
-
-                    <!-- Feeder project detail collpase -->
-                    <div class="col-12 order-md-last collapse fade mb-4" id="detail_feeder">
-                        <div class="ProjectInfo px-2 shadow-sm">
-                            <h4>
-                                App-Controlled Pet Feeder Project
-                                <button type="button" class="btn-close float-end" href="#detail_feeder"
-                                    data-bs-toggle="collapse" aria-label="Close">
-                                </button>
-                            </h4>
-
-                            <h5> Objective </h5>
-                            <p>This project was from the Advanced Hardware Design course. The goal was to utilize
-                                hardware design and software development
-                                to produce a practical application. I wanted to modify an existing manual food dispenser
-                                into an automatic feeder
-                                for my pet. The features includes:
-                            </p>
-                            <ul class="Education">
-                                <li> The ability to be controlled remotely using network. </li>
-                                <li> An online database to keep records of feeding time and amount. </li>
-                                <li> A way to control the amount of food dispensed.</li>
-                            </ul>
-
-                            <h5> Approach</h5>
-                            <p>
-                                The schematic shows the system layout. I chose the Raspberry Pi 4 due to its networking
-                                features.
-                                The setup was straightforward: the Pi controlled a stepper motor via GPIO pins and then
-                                it was connected
-                                to a cloud database. For this project, I used Google Firebase. Next, I wrote an Android
-                                App that sent signals
-                                to the database which updated the variables in real-time. The Pi read any change and
-                                responsed accordingly.
-                                It could also wrote to Firebase, such as time records. The App read the values and
-                                displayed to the user. I included a button
-                                for manual control in case of network failure. The Raspberry code was written in Python.
-                                <br> <br>
-                            </p>
-
-                            <div class="text-center">
-                                <img class="img-fluid" src="./Image/Project/Feeder/system.jpg" alt="System Schematic"
-                                    style="max-width: 50%;"> <br>
                             </div>
+                        </div>
 
-                            <p>
-                                The feeder was originally an affordable aftermarket food container. I modified the valve
-                                mechanism by connecting the shaft
-                                to a stepper motor. Instead of DC or Servo motor, stepper motor offered more precise
-                                positioning control
-                                In this application, speed was not a crucial factor, but torque was a higher priority.
-                                The motor was bipolar, with 1.8 degree
-                                rotation per step. Therefore, it needed 200 steps to complete a full revolution. By
-                                controlling the speed, I could adjust the dispensed amount.
-                                <br> <br>
-                                The GPIO pin provided 3.3 V, which was not enough to power the motor. I used the L298N
-                                motor-driver module to provide controls and power to the motor. A 12V battery packs
-                                connected to the module
-                                so that the motor can produce full torque. It
-                                had two H-bridges; each bridge drove the coil of the motor. The enable pins allows the
-                                GPIO from Raspberry to enable the motor.
-                            </p> <br>
+                        <!-- Feeder project detail collpase -->
+                        <div class="col-12 order-md-last collapse fade mb-4" id="detail_feeder" data-bs-parent="#ProjectGrid">
+                            <div class="ProjectInfo px-2 shadow-sm">
+                                <h4>
+                                    App-Controlled Pet Feeder Project
+                                    <button type="button" class="btn-close float-end" href="#detail_feeder"
+                                        data-bs-toggle="collapse" aria-label="Close">
+                                    </button>
+                                </h4>
 
-                            <div class="container-lg text-center">
-                                <div class="row">
-                                    <div class="col-6">
-                                        <img class="img-fluid " src="./Image/Project/Feeder/motor_connection.jpg">
-                                    </div>
-                                    <div class="col-6">
-                                        <img class="img-fluid" src="./Image/Project/Feeder/container.jpg">
+                                <h5> Objective </h5>
+                                <p>This project was from the Advanced Hardware Design course. The goal was to utilize
+                                    hardware design and software development
+                                    to produce a practical application. I wanted to modify an existing manual food
+                                    dispenser
+                                    into an automatic feeder
+                                    for my pet. The features includes:
+                                </p>
+                                <ul class="Education">
+                                    <li> The ability to be controlled remotely using network. </li>
+                                    <li> An online database to keep records of feeding time and amount. </li>
+                                    <li> A way to control the amount of food dispensed.</li>
+                                </ul>
+
+                                <h5> Approach</h5>
+                                <p>
+                                    The schematic shows the system layout. I chose the Raspberry Pi 4 due to its
+                                    networking
+                                    features.
+                                    The setup was straightforward: the Pi controlled a stepper motor via GPIO pins and
+                                    then
+                                    it was connected
+                                    to a cloud database. For this project, I used Google Firebase. Next, I wrote an
+                                    Android
+                                    App that sent signals
+                                    to the database which updated the variables in real-time. The Pi read any change and
+                                    responsed accordingly.
+                                    It could also wrote to Firebase, such as time records. The App read the values and
+                                    displayed to the user. I included a button
+                                    for manual control in case of network failure. The Raspberry code was written in
+                                    Python.
+                                    <br> <br>
+                                </p>
+
+                                <div class="text-center">
+                                    <img class="img-fluid" src="./Image/Project/Feeder/system.jpg"
+                                        alt="System Schematic" style="max-width: 50%;"> <br>
+                                </div>
+
+                                <p>
+                                    The feeder was originally an affordable aftermarket food container. I modified the
+                                    valve
+                                    mechanism by connecting the shaft
+                                    to a stepper motor. Instead of DC or Servo motor, stepper motor offered more precise
+                                    positioning control
+                                    In this application, speed was not a crucial factor, but torque was a higher
+                                    priority.
+                                    The motor was bipolar, with 1.8 degree
+                                    rotation per step. Therefore, it needed 200 steps to complete a full revolution. By
+                                    controlling the speed, I could adjust the dispensed amount.
+                                    <br> <br>
+                                    The GPIO pin provided 3.3 V, which was not enough to power the motor. I used the
+                                    L298N
+                                    motor-driver module to provide controls and power to the motor. A 12V battery packs
+                                    connected to the module
+                                    so that the motor can produce full torque. It
+                                    had two H-bridges; each bridge drove the coil of the motor. The enable pins allows
+                                    the
+                                    GPIO from Raspberry to enable the motor.
+                                </p> <br>
+
+                                <div class="container-lg text-center">
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <img class="img-fluid " src="./Image/Project/Feeder/motor_connection.jpg">
+                                        </div>
+                                        <div class="col-6">
+                                            <img class="img-fluid" src="./Image/Project/Feeder/container.jpg">
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
 
-                            <p> The Android App was coded in Android Studio using JavaScript. I made a simple interface:
-                                choose the food amount, feed, and emergency stop.
-                                The App connected to Firebase server and read/write values in real-time.</p> <br>
+                                <p> The Android App was coded in Android Studio using JavaScript. I made a simple
+                                    interface:
+                                    choose the food amount, feed, and emergency stop.
+                                    The App connected to Firebase server and read/write values in real-time.</p> <br>
 
-                            <div class="text-center">
-                                <img class="img-fluid" src="./Image/Project/Feeder/app.jpg" style="max-width: 40%;
+                                <div class="text-center">
+                                    <img class="img-fluid" src="./Image/Project/Feeder/app.jpg" style="max-width: 40%;
                                 display: inline-block;">
+                                </div>
+
+                                <h5>Results</h5>
+
+                                <p> <img id="PlayButton" src="./Image/Icon/play-btn.svg" alt="Play Button Icon"> Project
+                                    Demo:</p>
+
+                                <video width="320" height="240" controls>
+                                    <source src="./Video/Feeder_1.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video> <br>
+
+                                <p> <span id="bold_underline">What I learned:</span> Python coding, Android App
+                                    development,
+                                    Raspberry Pi, Motor Control</p> <br>
+                                <p> <span id="bold_underline">Future improvement:</span> There was an issue when more
+                                    dry
+                                    food added to the
+                                    container. Due to heavier weight on the valve,
+                                    it would require more torque to turn. The plastic blades were not strong enough
+                                    when food filled the container. Updates for the system need to
+                                    have a high torque motor or modify the dispensing mechanism to be more rigid.</p>
+                                <br>
+
+                                <div class="text-center">
+                                    <a href="#detail_feeder" class="ResumeButton" data-bs-toggle="collapse"
+                                        aria-label="Close">
+                                        Close Detail
+                                    </a>
+                                </div> <br>
+
                             </div>
-
-                            <h5>Results</h5>
-
-                            <p> <img id="PlayButton" src="./Image/Icon/play-btn.svg" alt="Play Button Icon"> Project
-                                Demo:</p>
-
-                            <video width="300" height="240" controls>
-                                <source src="./Video/Feeder_1.mp4" type="video/mp4">
-                                Your browser does not support the video tag.
-                            </video> <br>
-
-                            <p> <span id="bold_underline">What I learned:</span> Python coding, Android App development,
-                                Raspberry Pi, Motor Control</p> <br>
-                            <p> <span id="bold_underline">Future improvement:</span> There was an issue when more dry
-                                food added to the
-                                container. Due to heavier weight on the valve,
-                                it would require more torque to turn. The plastic blades were not strong enough
-                                when food filled the container. Updates for the system need to
-                                have a high torque motor or modify the dispensing mechanism to be more rigid.</p> <br>
-
-                            <div class="text-center">
-                                <a href="#detail_feeder" class="ResumeButton" data-bs-toggle="collapse"
-                                    aria-label="Close">
-                                    Close Detail
-                                </a>
-                            </div> <br>
-
                         </div>
+
+                        <!-- BLE Robot Project -->
+                        <div class="col-md-4">
+                            <div class="card mb-4">
+                                <a class="project_a" href="#detail_BLE" data-bs-toggle="collapse" aria-expanded="true">
+                                    <img class="card-img-top" src="Image/BLE_Robot.jpg" data-holder-rendered="true">
+                                    <div class="card-body">
+                                        <p class="card-text text-center">Bluetooth-Controlled Robot</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="col-12 order-md-last collapse fade mb-4" id="detail_BLE" data-bs-parent="#ProjectGrid">
+                            <div class="ProjectInfo px-2 shadow-sm">
+                                <h4>
+                                    Bluetooth-Controlled Robot
+                                    <button type="button" class="btn-close float-end" href="#detail_BLE"
+                                        data-bs-toggle="collapse" aria-label="Close">
+                                    </button>
+                                </h4>
+                                <p class="text-center">
+                                    Details are coming soon <br> <br>
+                                </p>
+
+                                <div class="text-center">
+                                    <a href="#detail_BLE" class="ResumeButton" data-bs-toggle="collapse"
+                                        aria-label="Close">
+                                        Close Detail
+                                    </a>
+                                </div> <br>
+                            </div>
+                        </div>
+
                     </div>
 
-                    <!-- BLE Robot Project -->
-                    <div class="col-md-4">
-                        <div class="card mb-4">
-                            <a class="project_a" href="#detail_BLE" data-bs-toggle="collapse" aria-expanded="true">
-                                <img class="card-img-top" src="Image/BLE_Robot.jpg" data-holder-rendered="true">
-                                <div class="card-body">
-                                    <p class="card-text text-center">Bluetooth-Controlled Robot</p>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
+                    <div class="row" id="row2">
 
-                    <div class="col-12 order-md-last collapse fade mb-4" id="detail_BLE">
-                        <div class="ProjectInfo px-2 shadow-sm">
-                            <h4>
-                                Bluetooth-Controlled Robot
-                                <button type="button" class="btn-close float-end" href="#detail_BLE"
-                                    data-bs-toggle="collapse" aria-label="Close">
-                                </button>
-                            </h4>
-                            <p class="text-center">
-                                Details are coming soon <br> <br>
-                            </p>
 
-                            <div class="text-center">
-                                <a href="#detail_BLE" class="ResumeButton" data-bs-toggle="collapse" aria-label="Close">
-                                    Close Detail
+                        <!-- Robot Arm Project -->
+                        <div class="col-md-4">
+                            <div class="card mb-4">
+                                <a class="project_a" href="#detail_arm" data-bs-toggle="collapse" aria-expanded="true">
+                                    <img class="card-img-top" src="Image/RobotArm.jpg" data-holder-rendered="true">
+                                    <div class="card-body">
+                                        <p class="card-text text-center">Robot Arm</p>
+                                    </div>
                                 </a>
-                            </div> <br>
+                            </div>
+                        </div>
+
+                        <!-- Robot Arm detail collpase -->
+                        <div class="col-12 order-md-last collapse fade mb-4" id="detail_arm" data-bs-parent="#ProjectGrid">
+                            <div class="ProjectInfo px-2 shadow-sm">
+                                <h4>
+                                    Robot Arm
+                                    <button type="button" class="btn-close float-end" href="#detail_arm data-bs-parent="#ProjectGrid""
+                                        data-bs-toggle="collapse" aria-label="Close">
+                                    </button>
+                                </h4>
+                                <p class="text-center">
+                                    Details are coming soon <br><br>
+                                </p>
+
+                                <div class="text-center">
+                                    <a href="#detail_arm" class="ResumeButton" data-bs-toggle="collapse"
+                                        aria-label="Close">
+                                        Close Detail
+                                    </a>
+                                </div> <br>
+                            </div>
+                        </div>
+
+                        <!-- Modal Analysis project -->
+                        <div class="col-md-4">
+                            <div class="card mb-4">
+                                <a class="project_a" href="#detail_modal" data-bs-toggle="collapse"
+                                    aria-expanded="true">
+                                    <img class="card-img-top" src="./Image/Project/Modal/CoverModal.JPG"
+                                        data-holder-rendered="true">
+                                    <div class="card-body">
+                                        <p class="card-text text-center">Modal Analysis</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Modal Analysis detail collpase -->
+                        <div class="col-12 order-md-last collapse fade mb-4" id="detail_modal" data-bs-parent="#ProjectGrid">
+                            <div class="ProjectInfo px-2 shadow-sm">
+                                <h4>
+                                    Modal Analysis on Drilling Tool
+                                    <button type="button" class="btn-close float-end" href="#detail_modal"
+                                        data-bs-toggle="collapse" aria-label="Close">
+                                    </button>
+                                </h4>
+                                <p class="text-center">
+                                    Details are coming soon <br> <br>
+                                </p>
+
+                                <div class="text-center">
+                                    <a href="#detail_modal" class="ResumeButton" data-bs-toggle="collapse"
+                                        aria-label="Close">
+                                        Close Detail
+                                    </a>
+                                </div> <br>
+                            </div>
+                        </div>
+
+                        <!-- Web project -->
+                        <div class="col-md-4">
+                            <div class="card mb-4">
+                                <a class="project_a" href="#detail_web" data-bs-toggle="collapse" aria-expanded="true">
+                                    <img class="card-img-top" src="./Image/Project/Web/CoverWeb.JPG"
+                                        data-holder-rendered="true">
+                                    <div class="card-body">
+                                        <p class="card-text text-center">Personal Porfolio</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Web project detail collpase -->
+                        <div class="col-12 order-md-last collapse fade mb-4" id="detail_web" data-bs-parent="#ProjectGrid">
+                            <div class="ProjectInfo px-2 shadow-sm">
+                                <h4>
+                                    Web Development Project
+                                    <button type="button" class="btn-close float-end" href="#detail_web"
+                                        data-bs-toggle="collapse" aria-label="Close">
+                                    </button>
+                                </h4>
+                                <p>
+                                    This profolio is my first website. I create it to showcase my work and personality
+                                    beyond the resume.
+                                    I have always wanted to learn about web development,
+                                    so this project is an opportunity to get familiar with HTML, CSS, and JavaScript.
+                                    Most
+                                    of the learning process is self-taught.
+                                    Since I am building from sratch, there are still so much to learn from. The site is
+                                    still being developed and improved over time. <br> <br>
+                                </p>
+
+                                <div class="text-center">
+                                    <a href="#detail_web" class="ResumeButton" data-bs-toggle="collapse"
+                                        aria-label="Close">
+                                        Close Detail
+                                    </a>
+                                </div> <br>
+                            </div>
                         </div>
                     </div>
 
                 </div>
-
-                <div class="row" id="row2">
-
-
-                    <!-- Robot Arm Project -->
-                    <div class="col-md-4">
-                        <div class="card mb-4">
-                            <a class="project_a" href="#detail_arm" data-bs-toggle="collapse" aria-expanded="true">
-                                <img class="card-img-top" src="Image/RobotArm.jpg" data-holder-rendered="true">
-                                <div class="card-body">
-                                    <p class="card-text text-center">Robot Arm</p>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- Robot Arm detail collpase -->
-                    <div class="col-12 order-md-last collapse fade mb-4" id="detail_arm">
-                        <div class="ProjectInfo px-2 shadow-sm">
-                            <h4>
-                                Robot Arm
-                                <button type="button" class="btn-close float-end" href="#detail_arm"
-                                    data-bs-toggle="collapse" aria-label="Close">
-                                </button>
-                            </h4>
-                            <p class="text-center">
-                                Details are coming soon <br><br>
-                            </p>
-
-                            <div class="text-center">
-                                <a href="#detail_arm" class="ResumeButton" data-bs-toggle="collapse" aria-label="Close">
-                                    Close Detail
-                                </a>
-                            </div> <br>
-                        </div>
-                    </div>
-
-                    <!-- Modal Analysis project -->
-                    <div class="col-md-4">
-                        <div class="card mb-4">
-                            <a class="project_a" href="#detail_modal" data-bs-toggle="collapse" aria-expanded="true">
-                                <img class="card-img-top" src="./Image/Project/Modal/CoverModal.JPG"
-                                    data-holder-rendered="true">
-                                <div class="card-body">
-                                    <p class="card-text text-center">Modal Analysis</p>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- Modal Analysis detail collpase -->
-                    <div class="col-12 order-md-last collapse fade mb-4" id="detail_modal">
-                        <div class="ProjectInfo px-2 shadow-sm">
-                            <h4>
-                                Modal Analysis on Drilling Tool
-                                <button type="button" class="btn-close float-end" href="#detail_modal"
-                                    data-bs-toggle="collapse" aria-label="Close">
-                                </button>
-                            </h4>
-                            <p class="text-center">
-                                Details are coming soon <br> <br>
-                            </p>
-
-                            <div class="text-center">
-                                <a href="#detail_modal" class="ResumeButton" data-bs-toggle="collapse"
-                                    aria-label="Close">
-                                    Close Detail
-                                </a>
-                            </div> <br>
-                        </div>
-                    </div>
-
-                    <!-- Web project -->
-                    <div class="col-md-4">
-                        <div class="card mb-4">
-                            <a class="project_a" href="#detail_web" data-bs-toggle="collapse" aria-expanded="true">
-                                <img class="card-img-top" src="./Image/Project/Web/CoverWeb.JPG"
-                                    data-holder-rendered="true">
-                                <div class="card-body">
-                                    <p class="card-text text-center">Personal Porfolio</p>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- Web project detail collpase -->
-                    <div class="col-12 order-md-last collapse fade mb-4" id="detail_web">
-                        <div class="ProjectInfo px-2 shadow-sm">
-                            <h4>
-                                Web Development Project
-                                <button type="button" class="btn-close float-end" href="#detail_web"
-                                    data-bs-toggle="collapse" aria-label="Close">
-                                </button>
-                            </h4>
-                            <p>
-                                This profolio is my first website. I create it to showcase my work and personality
-                                beyond the resume.
-                                I have always wanted to learn about web development,
-                                so this project is an opportunity to get familiar with HTML, CSS, and JavaScript. Most
-                                of the learning process is self-taught.
-                                Since I am building from sratch, there are still so much to learn from. The site is
-                                still being developed and improved over time. <br> <br>
-                            </p>
-
-                            <div class="text-center">
-                                <a href="#detail_web" class="ResumeButton" data-bs-toggle="collapse" aria-label="Close">
-                                    Close Detail
-                                </a>
-                            </div> <br>
-                        </div>
-                    </div>
-                </div>
-
-
             </div>
 
     </main>
