@@ -331,9 +331,14 @@ p{
     text-align: center;
     color: #17252A;
   }
+
+  div.IntroText{
+    font-size: 1.6em;
+  }
   
   section.Home{
     background-image: none;
+    min-height: 65vh;
   }
 
 }
