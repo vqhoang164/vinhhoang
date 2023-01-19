@@ -66,27 +66,21 @@
                                     </button>
                                 </h4>
                                 <h5> Objective </h5>
-                                <p> This team project's goal was to apply digital design knowlege and create a fun game
-                                    on
-                                    the FPGA using Verilog.
-                                    The gameplay was simple: the user needed to replicate a sequence of 3 random
-                                    generated
-                                    number in a limited time. After one set, the sequence would start again with a new
-                                    sequence,
-                                    and the process continued until total time ran out. To add complexity to the design,
-                                    we implemented different features such as:
+                                <p> This team project aimed to apply digital design knowledge and create a fun game on the FPGA using Verilog. 
+                                    The gameplay was simple: the user needed to replicate a sequence of 3 randomly generated numbers in a limited time. 
+                                    After one set, the process would start again with a new sequence until the total time ran out. 
+                                    To add complexity to the design, we implemented different features such as:
                                 </p>
 
                                 <ul class="Education">
-                                    <li> Multi-user authentication: allow different players to login and play </li>
+                                    <li> Multi-user authentication: allow different players to log in and play </li>
                                     <li> Score Keeping: record of each player and highest score </li>
                                     <li> Log In/Out</li>
                                     <li> Difficulty Setting</li>
                                     <li> Password Reset </li>
                                 </ul>
 
-                                <p> We use the switches, button, and seven-segment LED display on the FPGA for the game
-                                    interface.</p>
+                                <p> We use the switches, buttons, and seven-segment LED displays on the FPGA for the game interface.</p>
 
                                 <div class="text-start">
                                     <img class="img-fluid" src="./Image/Project/FPGA/interface.jpg" alt="FPGA Interface"
@@ -95,12 +89,8 @@
 
                                 <h5> Approach </h5>
                                 <p>
-                                    Before dividing tasks, our team came together to build and agreed on the
-                                    top-level system architect. The top-level system provided an overview of the
-                                    required
-                                    functionalities, modules' interactions,
-                                    registers, wirings, input/outputs, and opportunity to optimize as the work
-                                    progressed.
+                                    Before dividing tasks, our team collaborated to build and agree on the top-level system architect. 
+                                    The top-level system provided an overview of the required functionalities, modules' interactions, registers, wirings, input/outputs, and opportunities to optimize as the work progressed.
                                     <br> <br>
                                 </p>
                                 <div class="container-lg text-center">
@@ -114,14 +104,9 @@
                                     </div>
                                 </div>
                                 <p>
-                                    Various modules were implemented to build up the game. Some examples are: LFSR
-                                    random
-                                    number generator,
-                                    shift register, multi-digit timer, button shaper, load register, 7-segment display,
-                                    adder, etc.
-                                    ROM and RAM were used to save the scores, password, and user ID. All modules were
-                                    written in Verilog.
-                                    We used Quartus Prime to synthesize Verilog files to the FPGA board. <br> <br>
+                                    Various modules were implemented to build up the game. Some examples are LFSR random number generator, shift register, multi-digit timer, button shaper, load register, 7-segment display, adder, etc. ROM and RAM were used to save the scores, password, and user ID. All modules were written in Verilog. 
+                                    We used Quartus Prime to synthesize Verilog files to the FPGA board. 
+                                    <br> <br>
 
                                 </p>
 
@@ -136,15 +121,7 @@
                                     </div>
                                 </div>
                                 <p>
-                                    One of the modules that I handled was the random number sequence controller.
-                                    This module was the unique feature of our project from other teams. It contained
-                                    random number generator, FIFO, and a controller. I modified a simplified version of
-                                    FIFO
-                                    that stored three numbers and it could
-                                    read/write the generated random numbers when signaled, while ensuring the sequence
-                                    consistency.
-                                    The finite-state machine method was used to define stages of the game flow over the
-                                    clock cycles.
+                                    One of the modules that I handled was the random number sequence controller. This module was a unique feature of our project from other teams. It contained a random number generator, FIFO, and a controller. I modified a simplified version of FIFO that stored three numbers in the queue. When receiving a high signal, it could read/write the generated random numbers. The finite-state machine method was used to define stages of the game flow over the clock cycles.
                                 </p>
                                 <div class="container-lg text-center">
                                     <div class="row">
@@ -158,11 +135,7 @@
                                 </div>
 
                                 <p>
-                                    ModelSim was used to simulate and test all modules. I used direct test method,
-                                    tried different inputs cases and verified the expected outputs.
-                                    Testing was done on all individual modules and built up to debug larger modules.
-                                    Simulation is an efficient
-                                    method to minimize bugs before synthesis.
+                                    ModelSim was used to simulate and test all modules. Testing was done on all individual modules and built up to debug the top-level system module. Simulation is an efficient method to minimize bugs before synthesizing the codes to FPGA hardware.
                                 </p>
 
                                 <div class="text-center">
@@ -220,12 +193,7 @@
                                 </h4>
 
                                 <h5> Objective </h5>
-                                <p>This project was from the Advanced Hardware Design course. The goal was to utilize
-                                    hardware design and software development
-                                    to produce a practical application. I wanted to modify an existing manual food
-                                    dispenser
-                                    into an automatic feeder
-                                    for my pet. The features includes:
+                                <p>This project was from the Advanced Hardware Design course. The goal was to utilize hardware design and software development to produce a practical application. I wanted to modify a manual food dispenser into an automatic feeder for my pet. The features include:
                                 </p>
                                 <ul class="Education">
                                     <li> The ability to be controlled remotely using network. </li>
@@ -235,21 +203,7 @@
 
                                 <h5> Approach</h5>
                                 <p>
-                                    The schematic shows the system layout. I chose the Raspberry Pi 4 due to its
-                                    networking
-                                    features.
-                                    The setup was straightforward: the Pi controlled a stepper motor via GPIO pins and
-                                    then
-                                    it was connected
-                                    to a cloud database. For this project, I used Google Firebase. Next, I wrote an
-                                    Android
-                                    App that sent signals
-                                    to the database which updated the variables in real-time. The Pi read any change and
-                                    responsed accordingly.
-                                    It could also wrote to Firebase, such as time records. The App read the values and
-                                    displayed to the user. I included a button
-                                    for manual control in case of network failure. The Raspberry code was written in
-                                    Python.
+                                    The schematic shows the system layout. I chose the Raspberry Pi 4 due to its networking features. The setup was straightforward: the Pi controlled a stepper motor via GPIO pins and connected to a cloud database for remote access. For this project, I used Google Firebase. Next, I wrote an Android App that sent signals to the database, updating the real-time parameters. The Pi read any change and responded accordingly. It could also log data to the Firebase, such as time records. The App read the values and displayed data to the user. I included a button for manual control in case of network failure. The Raspberry code was written in Python.
                                     <br> <br>
                                 </p>
 
@@ -259,25 +213,9 @@
                                 </div>
 
                                 <p>
-                                    The feeder was originally an affordable aftermarket food container. I modified the
-                                    valve
-                                    mechanism by connecting the shaft
-                                    to a stepper motor. Instead of DC or Servo motor, stepper motor offered more precise
-                                    positioning control
-                                    In this application, speed was not a crucial factor, but torque was a higher
-                                    priority.
-                                    The motor was bipolar, with 1.8 degree
-                                    rotation per step. Therefore, it needed 200 steps to complete a full revolution. By
-                                    controlling the speed, I could adjust the dispensed amount.
+                                    The feeder was originally an affordable aftermarket food container. I modified the valve mechanism by connecting the shaft to a stepper motor. Instead of DC or Servo motor, the stepper motor offered more precise positioning control. Speed was not a crucial factor in this application; torque was a higher priority. The stepper motor was bipolar, with a 1.8-degree rotation per step. Therefore, it needed 200 steps to complete a full revolution. By controlling the speed, I could adjust the dispensed amount.
                                     <br> <br>
-                                    The GPIO pin provided 3.3 V, which was not enough to power the motor. I used the
-                                    L298N
-                                    motor-driver module to provide controls and power to the motor. A 12V battery packs
-                                    connected to the module
-                                    so that the motor can produce full torque. It
-                                    had two H-bridges; each bridge drove the coil of the motor. The enable pins allows
-                                    the
-                                    GPIO from Raspberry to enable the motor.
+                                    The GPIO pin provided 3.3 V, which was insufficient to power the motor. I used the L298N motor-driver module to provide controls and power to the motor. A 12V battery pack was connected to the module so that the motor could produce maximum torque. It had two H-bridges; each bridge drove the coil of the motor. The enable pins allowed the GPIO from Raspberry to activate the motor.
                                 </p> <br>
 
                                 <div class="container-lg text-center">
@@ -291,10 +229,8 @@
                                     </div>
                                 </div>
 
-                                <p> The Android App was coded in Android Studio using JavaScript. I made a simple
-                                    interface:
-                                    choose the food amount, feed, and emergency stop.
-                                    The App connected to Firebase server and read/write values in real-time.</p> <br>
+                                <p> The Android App was coded in Android Studio using JavaScript. I made a simple interface: choose the food amount, feed, and emergency stop. The App was connected to the Firebase server to read/write values in real time.
+                                </p> <br>
 
                                 <div class="text-center">
                                     <img class="img-fluid" src="./Image/Project/Feeder/app.jpg" style="max-width: 40%;
@@ -314,13 +250,8 @@
                                 <p> <span id="bold_underline">What I learned:</span> Python coding, Android App
                                     development,
                                     Raspberry Pi, Motor Control</p> <br>
-                                <p> <span id="bold_underline">Future improvement:</span> There was an issue when more
-                                    dry
-                                    food added to the
-                                    container. Due to heavier weight on the valve,
-                                    it would require more torque to turn. The plastic blades were not strong enough
-                                    when food filled the container. Updates for the system need to
-                                    have a high torque motor or modify the dispensing mechanism to be more rigid.</p>
+                                <p> <span id="bold_underline">Future improvement:</span> 
+                                    There was an issue when more dry food was added to the container. Due to the heavier weight of the valve, it would require more torque to turn. In addition, the plastic blades were not strong enough when food filled the container. Updates for the system need to have a high torque motor or modify the dispensing mechanism to be more rigid.</p>
                                 <br>
 
                                 <div class="text-center">
